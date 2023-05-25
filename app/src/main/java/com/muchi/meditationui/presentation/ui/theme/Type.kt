@@ -34,24 +34,18 @@ fun typography() = Typography(
         color = AquaBlue,
         fontFamily = gothicA1,
         fontWeight = FontWeight.Normal,
-        fontSize = dimensionResourceSp(R.dimen.x12dp)
+        fontSize = dimensionResourceSp(R.dimen.x14dp)
     ),
     h1 = TextStyle(
         color = TextWhite,
         fontFamily = gothicA1,
         fontWeight = FontWeight.Bold,
-        fontSize = dimensionResourceSp(R.dimen.x18dp)
+        fontSize = dimensionResourceSp(R.dimen.x22dp)
     ),
     h2 = TextStyle(
         color = TextWhite,
         fontFamily = gothicA1,
         fontWeight = FontWeight.Bold,
-        fontSize = dimensionResourceSp(R.dimen.x16dp)
-    ),
-    h3 = TextStyle(
-        color = TextWhite,
-        fontFamily = gothicA1,
-        fontWeight = FontWeight.Bold,
-        fontSize = dimensionResourceSp(R.dimen.x14dp)
+        fontSize = dimensionResourceSp(R.dimen.x18dp)
     )
 )
