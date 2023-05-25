@@ -94,7 +94,7 @@ fun FeatureItem(
             Text(
                 text = feature.title,
                 style = MaterialTheme.typography.h2,
-                lineHeight = dimensionResourceSp(R.dimen.x26sp),
+                lineHeight = dimensionResourceSp(R.dimen.x26dp),
                 modifier = Modifier.align(Alignment.TopStart)
             )
             Icon(
@@ -106,7 +106,7 @@ fun FeatureItem(
             Text(
                 text = "Start",
                 color = TextWhite,
-                fontSize = dimensionResourceSp(R.dimen.x14sp),
+                fontSize = dimensionResourceSp(R.dimen.x14dp),
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .clickable {
