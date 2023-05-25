@@ -11,8 +11,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.unit.dp
+import com.muchi.meditationui.R
 import com.muchi.meditationui.presentation.ui.theme.AquaBlue
 import com.muchi.meditationui.presentation.ui.theme.ButtonBlue
 
@@ -35,15 +36,15 @@ fun BottomMenuItem(
         Box(
             contentAlignment = Alignment.Center,
             modifier = Modifier
-                .clip(RoundedCornerShape(10.dp))
+                .clip(RoundedCornerShape(dimensionResource(R.dimen.x10dp)))
                 .background(if (isSelected) activeHighlightColor else Color.Transparent)
-                .padding(10.dp)
+                .padding(dimensionResource(R.dimen.x10dp))
         ) {
             Icon(
                 painter = painterResource(id = item.iconId),
                 contentDescription = item.title,
                 tint = if (isSelected) activeTextColor else inactiveTextColor,
-                modifier = Modifier.size(20.dp)
+                modifier = Modifier.size(dimensionResource(R.dimen.x20dp))
             )
         }
         Text(

@@ -11,7 +11,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.dimensionResource
+import com.muchi.meditationui.R
 import com.muchi.meditationui.presentation.ui.theme.ButtonBlue
 import com.muchi.meditationui.presentation.ui.theme.DarkerButtonBlue
 import com.muchi.meditationui.presentation.ui.theme.TextWhite
@@ -28,16 +29,20 @@ fun ChipSection(
             Box(
                 contentAlignment = Alignment.Center,
                 modifier = Modifier
-                    .padding(start = 15.dp, top = 15.dp, bottom = 15.dp)
+                    .padding(
+                        start = dimensionResource(R.dimen.x15dp),
+                        top = dimensionResource(R.dimen.x15dp),
+                        bottom = dimensionResource(R.dimen.x15dp)
+                    )
                     .clickable {
                         selectedChipIndex = it
                     }
-                    .clip(RoundedCornerShape(10.dp))
+                    .clip(RoundedCornerShape(dimensionResource(R.dimen.x10dp)))
                     .background(
                         if (selectedChipIndex == it) ButtonBlue
                         else DarkerButtonBlue
                     )
-                    .padding(15.dp)
+                    .padding(dimensionResource(R.dimen.x15dp))
             ) {
                 Text(text = chips[it], color = TextWhite)
             }

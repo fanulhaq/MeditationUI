@@ -9,7 +9,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.dimensionResource
+import com.muchi.meditationui.R
 import com.muchi.meditationui.presentation.ui.theme.AquaBlue
 import com.muchi.meditationui.presentation.ui.theme.ButtonBlue
 import com.muchi.meditationui.presentation.ui.theme.DeepBlue
@@ -32,7 +33,7 @@ fun BottomMenu(
         modifier = modifier
             .fillMaxWidth()
             .background(DeepBlue)
-            .padding(15.dp)
+            .padding(dimensionResource(R.dimen.x15dp))
     ) {
         items.forEachIndexed { index, item ->
             BottomMenuItem(

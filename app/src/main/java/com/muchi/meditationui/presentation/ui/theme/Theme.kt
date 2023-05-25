@@ -6,8 +6,8 @@ import androidx.compose.runtime.Composable
 @Composable
 fun MeditationUITheme(content: @Composable () -> Unit) {
     MaterialTheme(
-        typography = Typography,
-        shapes = Shapes,
+        typography = typography(),
+        shapes = shapes(),
         content = content
     )
 }

@@ -15,12 +15,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import com.muchi.meditationui.R
 import com.muchi.meditationui.presentation.ui.theme.ButtonBlue
 import com.muchi.meditationui.presentation.ui.theme.TextWhite
+import com.muchi.meditationui.presentation.ui.theme.dimensionResourceSp
 import com.muchi.meditationui.util.standardQuadFromTo
 
 @Composable
@@ -29,9 +30,9 @@ fun FeatureItem(
 ) {
     BoxWithConstraints(
         modifier = Modifier
-            .padding(7.5.dp)
+            .padding(dimensionResource(R.dimen.x7_5dp))
             .aspectRatio(1f)
-            .clip(RoundedCornerShape(10.dp))
+            .clip(RoundedCornerShape(dimensionResource(R.dimen.x10dp)))
             .background(feature.darkColor)
     ) {
         val width = constraints.maxWidth
@@ -88,12 +89,12 @@ fun FeatureItem(
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(15.dp)
+                .padding(dimensionResource(R.dimen.x15dp))
         ) {
             Text(
                 text = feature.title,
                 style = MaterialTheme.typography.h2,
-                lineHeight = 26.sp,
+                lineHeight = dimensionResourceSp(R.dimen.x26sp),
                 modifier = Modifier.align(Alignment.TopStart)
             )
             Icon(
@@ -105,16 +106,16 @@ fun FeatureItem(
             Text(
                 text = "Start",
                 color = TextWhite,
-                fontSize = 14.sp,
+                fontSize = dimensionResourceSp(R.dimen.x14sp),
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .clickable {
                         // Handle the click
                     }
                     .align(Alignment.BottomEnd)
-                    .clip(RoundedCornerShape(10.dp))
+                    .clip(RoundedCornerShape(dimensionResource(R.dimen.x10dp)))
                     .background(ButtonBlue)
-                    .padding(vertical = 6.dp, horizontal = 15.dp)
+                    .padding(vertical = dimensionResource(R.dimen.x6dp), horizontal = dimensionResource(R.dimen.x15dp))
             )
         }
     }

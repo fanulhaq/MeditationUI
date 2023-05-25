@@ -1,6 +1,10 @@
 package com.muchi.meditationui.presentation.ui.theme
 
+import androidx.annotation.DimenRes
 import androidx.compose.material.Typography
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.ReadOnlyComposable
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -19,23 +23,29 @@ val gothicA1 = FontFamily(
 )
 
 // Set of Material typography styles to start with
-val Typography = Typography(
+@Composable
+@ReadOnlyComposable
+fun dimensionResourceSp(@DimenRes id: Int) = dimensionResource(id).value.sp
+
+@Composable
+@ReadOnlyComposable
+fun typography() = Typography(
     body1 = TextStyle(
         color = AquaBlue,
         fontFamily = gothicA1,
         fontWeight = FontWeight.Normal,
-        fontSize = 14.sp
+        fontSize = dimensionResourceSp(R.dimen.x14sp)
     ),
     h1 = TextStyle(
         color = TextWhite,
         fontFamily = gothicA1,
         fontWeight = FontWeight.Bold,
-        fontSize = 22.sp
+        fontSize = dimensionResourceSp(R.dimen.x22sp)
     ),
     h2 = TextStyle(
         color = TextWhite,
         fontFamily = gothicA1,
         fontWeight = FontWeight.Bold,
-        fontSize = 18.sp
+        fontSize = dimensionResourceSp(R.dimen.x18sp)
     )
 )

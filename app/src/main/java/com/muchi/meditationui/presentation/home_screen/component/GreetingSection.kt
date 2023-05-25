@@ -8,8 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.unit.dp
 import com.muchi.meditationui.R
 
 @Composable
@@ -21,7 +21,7 @@ fun GreetingSection(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(15.dp)
+            .padding(dimensionResource(R.dimen.x15dp))
     ) {
         Column(
             verticalArrangement = Arrangement.Center
@@ -39,7 +39,7 @@ fun GreetingSection(
             painter = painterResource(id = R.drawable.ic_search),
             contentDescription = "Search",
             tint = Color.White,
-            modifier = Modifier.size(24.dp)
+            modifier = Modifier.size(dimensionResource(R.dimen.x24dp))
         )
     }
 }
